@@ -4,10 +4,9 @@ from abcstract.models import TimestampedMixin, SoftDeleteMixin
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)
     description = models.TextField(blank=True)
-    is_active = models.BooleanField(default=True)
 
     class Meta:
-        db_table = "cariegories"
+        db_table = "categories"
         verbose_name = "Categoria"
         verbose_name_plural = "Categorias"
 
